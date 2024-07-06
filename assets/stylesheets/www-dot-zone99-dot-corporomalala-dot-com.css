@@ -27,6 +27,7 @@ a { text-decoration: underline; }
 .section-content-title,
 .section-header-span2,
 .welcome-header-span2 { color: grey; }
+.u-brandText {// color: grey; }
 .section-content-figure-wrap { border-color: grey; }
 .section-content-figure-img { border-color: grey !important; }
 
@@ -38,10 +39,17 @@ a { text-decoration: underline; }
 /*** END COLORS ***/
 
 /*** FONTS ***/
-html, body, .main,
+@font-face {
+	font-family: "Mold Her Black";
+	src: url("../../assets/fonts/moldr-black.ttf");
+}
+
 .footer-button,
+.section-content-title,
 .section-header-span1,
-.welcome-header-span1 { font-family: "", sans-serif; }
+.welcome-header-span1,
+.u-brandText { font-family: "Mold Her Black", sans-serif; }
+html, body, main,
 .section-header-span2,
 .welcome-header-span2 { font-family: "", serif; }
 
