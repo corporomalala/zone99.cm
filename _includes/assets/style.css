@@ -1,0 +1,423 @@
+/*** Z-INDEXES ***/
+.d-bubbles { position: relative; z-index: 10; }
+.brochure { position: relative; z-index: 20; }
+/*** END Z-INDEXES ***/
+
+/*** COLORS ***/
+.brochure_dock,
+.header-title,
+.places-zone,
+.places-zone-content-button,
+.specials-offers,
+.d-bubbles:before { background-color: #E9DED1; }
+.places-zone-content-location { color: #E9DED1; }
+
+.u-cta-button { color: white; }
+
+html, body, main { background-color: #eee; }
+
+.brochure { background-color: rgba(0, 0, 0, .7); }
+
+.u-cta-button { background-color: black; }
+input.u-cta-button { background-color: black !important; }
+/*** END COLORS ***/
+
+/*** FONTS ***/
+@font-face{
+	font-family:"Mold Her Black";src:url("../../assets/fonts/moldr-black.ttf");/*src:url("../../assets/fonts/ALPHABETH.eot") format("embedded-opentype"),url("../../assets/fonts/ALPHABETH.woff2") format("woff2"),url("../../assets/fonts/ALPHABETH.woff") format("woff"),url("../../assets/fonts/ALPHABETH.ttf") format("trutype"),url("../../assets/fonts/ALPHABETH.svg") format("svg");*/}
+@font-face{ font-family:"Arial Black";src:url("../../assets/fonts/ariblk.ttf"); }
+
+.banner-content-title,
+.banner-content-title-span,
+.brochure-details-title,
+.contact-fieldset-cta-title,
+.header-title,
+.specials-offers-box-span,
+.specials-title { font-family: "Mold Her Black"; }
+* { font-family:"Arial Black", sans-serif; }
+
+.specials-title { font-size: 4em; }
+.brochure-details-title,
+.contact-fieldset-cta-title,
+.header-title { font-size: 1.9em; }
+.contact-text,
+.specials-offers-box-span { font-size: 1.25em; }
+.contact-fieldset-tooltip {// font-size: .75em; }
+
+.banner-content-title-span { font-style: italic; }
+.banner-content-title { text-align: right; }
+.footer-copyrights a { text-decoration: underline; }
+/*** END FONTS ***/
+
+/*** MEDIA ***/
+.banner-content-cta-button-icon { background-image: url("../../assets/images/icon_whatsapp_white.png"); background-size: cover; }
+
+
+.specials-offers-box:nth-child(1):before { background-image: url("../../assets/images/icon_accomodation_black.png"); }
+.specials-offers-box:nth-child(2):before { background-image: url("../../assets/images/icon_neighborhood_black.png"); }
+.specials-offers-box:nth-child(3):before { background-image: url("../../assets/images/icon_bonus_black.png"); }
+.specials-offers-box:before {
+	background-color: #eee;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 70%;
+}
+
+.specials .d-Z99.d-bubbles:before {
+//	background-color: black;
+	background-image: url("../../assets/images/logo_black.png");
+	background-position: .15em .05em;
+	background-size: 70%;
+	background-repeat: no-repeat;
+}
+
+.places-zone {
+	background-position: center;
+	background-size: cover;
+} .places-zone.is-map_bellevue-east { background-position: right; }
+  .places-zone.is-map_berea { background-position: left; }
+  .places-zone.is-map_kensington { background-position: bottom; }
+/*** END MEDIA ***/
+
+/*** UTILITIES ***/
+	/*** .u-cta-button ***/
+	.u-cta-button {
+		display: inline-block;
+		padding: 1em 1.9em;
+		border-radius: .5em;
+	}
+	.u-cta-button-icon {
+		width: 1em; height: 1em;
+		display: inline-block;
+		margin-right: .5em;
+		
+		float: left;
+	}
+/*** END UTILITIES ***/
+
+/*** COMPONENTS ***/
+	/*** COMMONS ***/
+	.specials-offers { border-radius: .5em 0 0 .5em; }
+/*** END COMPONENTS ***/
+
+/*** PAGE: Welcome ***/
+	/*** .banner ***/
+	.banner {
+		padding: 0 1em;
+	}
+	.banner-content-cta-text {
+		margin-bottom: 1em;
+	}
+	.banner-logo-img {
+		position: relative; top: -2.5em;
+		width: auto;
+	}
+	
+	/*** .brochure ***/
+	.brochure {
+		position: fixed; top: 0; left: 0;
+		width: 100%; height: 100%;
+	}
+	.brochure_dock {
+		width: 100%; height: 70%;
+		padding: 1.9em;
+		
+		overflow-y: auto;
+	}
+	.brochure-details-text {
+		margin: 1.9em 0;
+	}
+	
+	/*** contact ***/
+	.contact-fieldset-cta {
+		padding: 1.5em 1em;
+	}
+	.contact-fieldset-cta-title {
+		display: block;
+		margin: .5em;
+	}
+	
+	.contact-fieldset-input,
+	.contact-fieldset-line,
+	.contact-fieldset-select,
+	.contact-fieldset-textarea { margin: .5em 0; }
+	.contact-fieldset-line {
+		display: inline-block;
+		padding: 0 1em;
+	}
+	.contact-fieldset-input,
+	.contact-fieldset-select,
+	.contact-fieldset-textarea {
+		width: 100%;
+		padding: .5em;
+	}
+	.contact-fieldset-textarea {
+		min-height: 10em;
+	}
+	.contact-fieldset-tooltip { display: block; }
+	
+	.contact-text {
+		padding: 1em;
+		margin-bottom: 1.9em;
+	}
+	
+	/*** .footer ***/
+	.footer { margin-top: 4em; }
+	.footer-copyrights {
+		padding: 1em;
+	}
+	
+	/*** .header ***/
+	.header { text-align: right; }
+	
+	.header {
+		padding: 1em;
+		margin-bottom: 4em;
+	}
+	.header-title {
+		display: inline-block;
+		padding: .5em .75em .3em .75em;
+		border-radius: 4em;
+	}
+	
+	/*** places ***/
+	.places-list,
+	.places-zone-content { display: flex; }
+	.places-zone-content { flex-direction: column; }
+	.places-list-item { flex: 1; }
+	
+	.places {
+		margin-top: 4em;
+		overflow-x: scroll;
+	}
+	.places-list-item {
+		min-height: 7em;
+		margin: 1em;
+		
+		border-radius: 1em; overflow: hidden;
+	}
+	
+	.places-zone {
+		position: relative;
+	}
+	.places-zone:before {
+		content: "";
+		position: absolute; top: 0; left: 0;
+		width: 100%; height: 100%;
+
+		background-color: rgba(0, 0, 0, .7);
+	}
+	.places-zone-content {
+		position: absolute; top: 0; left: 0;
+		width: 100%; height: 100%;
+	}
+	.places-zone-content-button {
+		position: absolute; top: 1em; right: 1em;
+		
+		padding: .5em 1em;
+		border-radius: 4em;
+	}
+	.places-zone-content-icon {
+		width: 4em; height: 4em;
+	}
+	.places-zone-content-location {
+		padding: .5em;
+	}
+	.places-zone-img {
+	}
+	
+	/*** .specials ***/
+	.specials {
+		position: relative;
+		padding-bottom: 4em;
+	}
+	.specials-offers {
+		padding: .1em 1.9em;
+		margin: 1.5em 0;
+	}
+	.specials-offers-box {
+		position: relative;
+		padding: 0 1em;
+		margin: 1.9em 0;
+		margin-left: 1.9em;
+	}
+	.specials-offers-box:before {
+		content: "";
+		position: absolute; top: 0; left: -1.9em;
+		width: 1.9em; height: 1.9em;
+		border-radius: 50%;
+	}
+	.specials-offers-box-span,
+	.specials-offers-box-p { display: inline; }
+	
+	.specials-title {
+		padding: 0 .19em;
+	}
+/*** END PAGE: Welcome ***/
+
+/*** INTERRACTIVITY ***/
+.u-cta-button { cursor: pointer; }
+
+.brochure { display: none !important; }
+#chkbx4brochure:checked ~ main .brochure { display: flex !important; }
+/*** END INTERRACTIVITY ***/
+
+/*** MEDIA QUERIES ***/
+@media screen and (max-width: 50em) {
+	/*** FONTS ***/
+	body { font-size: 14px; }
+	
+	.banner-content-title,
+	.d-Z99 { font-size: 4em; }
+	
+	/*** PAGE: Welcome ==> .banner ***/
+	.banner-logo-img {
+		height: 4em;
+	}
+	
+	/*** PAGE: Welcome ==> .contact ***/
+	.contact-fieldset-cta,
+	.contact-fieldset-line { width: 100%; }
+	
+	/*** PAGE: Welcome ==> .places ***/
+	.places-list {
+		width: 300%;
+	}
+	
+	/*** PAGE: Welcome ==> .specials ***/
+	.specials-offers {
+		position: relative; left: 25%;
+		width: 75%;
+	}
+	
+	.specials .d-Z99 {
+		position: absolute; top: 0; right: 80%;
+	}
+}
+@media screen and (min-width: 50em) {
+	/*** FONTS ***/
+	body { font-size: 16px; }
+
+	.banner-content-title,
+	.d-Z99 { font-size: 7em; }
+	
+	/*** COMMONS ***/
+	main { padding: 1em; }
+	.contact,
+	.places {
+		position: relative; left: 30%;
+		width: 70%;
+	}
+
+	/*** PAGE: Welcome ==> .banner ***/
+	.banner { display: flex; }
+	.banner-content { flex: 1; }
+	
+	.banner-content-cta {
+		position: relative; left: 40%;
+		width: 40%;
+	}
+	.banner-content-title {
+		margin: .19em .25em 0 0;
+	}
+	
+	.banner-logo-img {
+		height: 10em;
+	}
+	
+	/*** PAGE: Welcome ==> .brochure ***/
+	.brochure_dock { display: flex; }
+	.brochure-details { flex: 1; }
+	
+	.brochure-details {
+		margin: 0 1.9em;
+	}
+	.brochure-figure-img {
+		width: auto; height: 100%;
+	}
+	
+	/*** PAGE: Welcome ==> .contact ***/
+	.contact-fieldset-cta,
+	.contact-fieldset-line { width: 50%; }
+	.contact-fieldset-line:last-child {// width: 100%; }
+	
+	.contact { position: relative; }
+	.contact-fieldset-cta {
+		position: absolute; bottom: 0; right: 0;
+	}
+	
+	/*** PAGE: Welcome ==> .places ***/
+	.places {
+//		padding: 1em 0;
+		overflow: auto;
+	}
+	.places-list {
+		width: 119%;
+	}
+	
+	/*** PAGE: Welcome ==> .specials ***/
+	.specials-offers {
+		position: relative; left: 60%;
+		width: 40%;
+	}
+	.specials-title {
+		position: relative; top: -1.9em;
+		float: left;
+	}
+	
+	.specials .d-Z99 {
+		position: absolute; top: 0; right: 45%;
+	}
+}
+/*** MEDIA QUERIES ***/
+
+/*** DECORATION ***/
+	/*** .d-cssCentered ***/
+	.d-cssCentered {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/*** .d-midWrap ***/
+	.d-midWrap {
+		max-width: 80em;
+		margin: 0 auto;
+	}
+	
+	/*** .d-bubbles ***/
+	.d-bubbles {
+		position: relative;
+	}
+	.d-bubbles:before {
+		content: "";
+		position: absolute;
+		width: .75em; height: .75em;
+		display: block;
+		border-radius: 50%;
+	}
+	.d-bubbles:before {
+		top: -.25em; left: -.5em;
+	}
+/*** END DECORATION ***/
+
+/*** ANIMATIONS ***/
+	/*** .d-bubbles ***/
+	.d-bubbles:before { animation: aBounce 1.9s infinite alternate; }
+
+	@keyframes aBounce {
+		0% { margin: 0; }
+		15% { margin: 0 0 0 .5em; }
+		30% { margin: .5em 0 0 0; }
+		45% { margin: .5em 0 0 .5em; }
+		60% { margin: .5em 0 0 0; }
+		75% { margin: 0 0 0 .5em; }
+		95% { margin: 0; }
+	}
+/*** END ANIMATIONS ***/
+
+/*** CSS-HACKS ***/
+main.d-midWrap { padding: 0; }
+
+* { font-weight: initial !important; }
+/*** END CSS-HACKS ***/

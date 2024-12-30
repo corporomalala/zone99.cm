@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="js-html">
+	<head>
+		{% include components/meta-tags.html %}
+	</head>
+	
+	<body>
+		<main class="d-midWrap">
+			<marquee class="marquee">Website in construction. Best viewed on computer.</marquee>
+		
+			<header class="header">
+				<div class="header-hgroup">
+					<h1 class="header-hgroup-title u-title">Donatien Malala</h1>
+					<h1 class="header-hgroup-subtitle u-subtitle">The Economist</h1>
+				</div>
+
+				<div class="header-portraits">
+					<figure class="header-portrait is-prime"><img src="/assets/images/placeholder-1x1.png" class="header-portrait-img" /></figure>
+					<figure class="header-portrait is-golden d-testWings"><img src="/assets/images/placeholder-1x1.png" class="header-portrait-img" /></figure>
+				</div>
+				
+				<div class="header-content"><div class="header-content-wrap">
+					<p class="header-content-p">Celebrating a career of excellence in ONATRA, Donatien Malala, is fondly known as _____. He received the Egyptian _____ Award for his unique research theory on _____. He has been published and cited in numerous publications like _____, _____ and more.</p>
+					<br />
+					<p class="header-content-p">From the pinnacle of his career to these enriching golden years, Donatien Malala continues to make invaluable contributions to the field. In his mature years, he dedicates ample time to delve deeper into his research pursuits and penning his upcoming book.</p>
+					<br />
+					<p class="header-content-p">Through his writings, Donatien Malala shares his wealth of knowledge and experience, inspiring others to explore new frontiers in economic theory and policy. As he celebrates the chapters of his career, he remains a beacon of wisdom and inspiration, leaving an indelible mark on the world of economics for generations to come.</p>
+				</div></div>
+			</header>
+			
+			<section class="newSection">
+			</section>
+
+			<section class="statistics">
+				<header class="statistics-header"><div class="statistics-header-dock">
+					<hgroup class="statistics-header-hgroup">
+						<h2 class="statistics-header-hgroup-title u-title">Statistics</h2>
+						<h5 class="statistics-header-hgroup-subtitle u-subtitle">Africa's Trade Outlook</h5>
+					</hgroup>
+
+					<div class="statistics-header-text">
+						<p class="statistics-header-text-p">Explore the fundamental principles that govern monetary policy, uncovering how decisions made by central banks influence inflation, interest rates, and overall economic stability.</p>
+						
+						<p class="statistics-header-text-p">Whether you're an aspiring economist or a curious observer of global financial dynamics, this website provides invaluable insights into the mechanisms driving monetary systems worldwide. Join us on a journey of discovery as we unravel the complexities of micro-economics and its profound impact on the lives of everyday individuals, particularly in emerging countries.</p>
+
+						<!--
+						<a class="statistics-header-text-a">Read More</a>
+						-->
+					</div>
+
+					<!--
+					<div class="statistics-header-share">Share</div>
+					-->
+				</div></header>
+
+				<div class="statistics-media"><div class="statistics-media-dock">
+					<video class="statistics-media-video" controls>
+						<source type="video/mp4" src="/assets/videos/sample.mp4" class="statistics-media-video-source" />
+					</video>
+					
+					<!--
+								<video class="program-extra-video" poster="/assets/videos/toy-resellers.png" controls>
+									<source src="/assets/videos/toy-resellers.mp4" type="video/mp4" />
+								</video>
+								-->
+				</div></div>
+
+				<div class="statistics-charts"><div class="statistics-charts-dock"><ul class="statistics-charts-list">
+					<li class="statistics-charts-list-item">{% include components/statistics/chart.html data="chart-1" %}</li>
+					<li class="statistics-charts-list-item">{% include components/statistics/chart.html data="chart-2" %}</li>
+					
+					<li class="statistics-charts-list-item">{% include components/statistics/chart.html data="chart-1" %}</li>
+					<li class="statistics-charts-list-item">{% include components/statistics/chart.html data="chart-2" %}</li>
+					<li class="statistics-charts-list-item">{% include components/statistics/chart.html data="chart-1" %}</li>
+					<li class="statistics-charts-list-item">{% include components/statistics/chart.html data="chart-2" %}</li>
+					<li class="statistics-charts-list-item">{% include components/statistics/chart.html data="chart-1" %}</li>
+					<li class="statistics-charts-list-item">{% include components/statistics/chart.html data="chart-2" %}</li>
+					<li class="statistics-charts-list-item">{% include components/statistics/chart.html data="chart-1" %}</li>
+					<li class="statistics-charts-list-item">{% include components/statistics/chart.html data="chart-2" %}</li>
+				</ul></div></div>
+
+				<!--
+				<span class="statistics-deco_bg"></span>
+				-->
+				
+				<div class="statistics-data">
+					<div class="statistics-data-text"><p class="statistics-data-text-p">Data-driven insights cam pinpoint critical areas needing development guiding effective policy-making and economic strategies. <br /><br />For instance, microeconomics analysis of household income and spending patterns can inform policies that boost consumer welfare and stimulate local markets. <br /><br />At the same time, monetary policy decisions, such as adjusting interest rates or managing inflation, can be fine-tuned using statistical data to stabilize economies and promote growth.</p></div>
+				
+					<ul class="statistics-data-list">
+						<li class="statistics-data-list-item"><div class="statistics-data-box"></div></li>
+						<li class="statistics-data-list-item">{% include components/statistics/chart.html data="chart-2" %}</li>
+						<li class="statistics-data-list-item">{% include components/statistics/chart.html data="chart-1" %}</li>
+						<li class="statistics-data-list-item">{% include components/statistics/chart.html data="chart-2" %}</li>
+						<li class="statistics-data-list-item">{% include components/statistics/chart.html data="chart-1" %}</li>
+						<li class="statistics-data-list-item"><div class="statistics-data-box"></div></li>
+						<li class="statistics-data-list-item">{% include components/statistics/chart.html data="chart-1" %}</li>
+					</ul>
+				</div>
+				
+				<!--
+				<div class="statistics-data"><ul class="statistics-data-list">{% for i in (1..7) %}
+					<li class="statistics-data-list-item"><div class="statistics-data-box">DATA Box{{ i }}</div></li>{% endfor %}
+				</ul></div>
+				-->
+			</section>
+		</main>
+
+	<script src="assets/scripts/www-dot-corporomalala-dot-com.js"></script>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+<section class="chart u-squareSection">{% assign chartMax = "0" %}{% assign rowDigit = 0 %}{% for file in site.data.statistics.[include.data] %}{% for data in file.data %}{% for content in data %}{% capture rowDigit %}{{ content[1] }}{% endcapture %}{% if rowDigit > chartMax %}{% capture chartMax %}{{ rowDigit }}{% endcapture %}{% endif %}{% endfor %}{% endfor %}{% endfor %}
+
+    {% assign digitsToSort = ""  %}{% for file in site.data.statistics.[include.data] %}{% for data in file.data %}{% for content in data %}{% capture digitsToSort %}{{ digitsToSort }}{{ content[1] }}{% endcapture %}{% endfor %}{% capture digitsToSort %}{{ digitsToSort }}{% if forloop.last %}{% else %},{% endif %}{% endcapture %}{% endfor %}{% endfor %}
+    {% assign sortedDigits =  digitsToSort | split: "," | sort %}
+    <div class="chart-dock u-squareSection-content d-cssCentered">{{ fileName }}
+        <hgroup class="chart-description">
+            <h6 class="chart-description-title">{% for file in site.data.statistics.[include.data] %}{{ file.title }}{% endfor %}</h6>
+            <span class="chart-description-subtitle">{% for file in site.data.statistics.[include.data] %}{{ file.subtitle }}{% endfor %}</span>
+        </hgroup>
+        <div class="chart-content">{% for file in site.data.statistics.[include.data] %}{% for data in file.data %}{% for content in data %}{% capture barDescription %}{{ content[0] }}{% endcapture %}{% capture barDigit %}{{ content[1] }}{% endcapture %}{% endfor %}
+            <div class="chart-content-bar is-nthRank{% if barDigit == sortedDigits[0] %}4{% elsif barDigit == sortedDigits[1] %}3{% elsif barDigit == sortedDigits[2] %}2{% elsif barDigit == sortedDigits[3] %}1{% endif %}" style="height: {{ barDigit | times: 100 | divided_by: chartMax }}%;"><span class="chart-content-bar-caption">{{ barDescription }}</span></div>{% endfor %}{% endfor %}
+        </div>
+    </div>
+
+    <img src="/assets/images/placeholder-1x1.png" class="chart-placeholder u-squareSection-placeholder" />
+</section>

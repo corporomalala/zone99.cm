@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="js-html">
+	<head>
+		{% include components/meta-tags.html %}
+	</head>
+	
+	<body>
+		<input type="checkbox" id="chkbx4brochure" name="chkbx4brochure" />
+	
+		<main class="d-midWrap">
+			<header class="header">
+				<h1 class="header-title">Z99</h1>
+			</header>
+			
+			<section class="banner">
+				<figure class="banner-logo">
+					<img src="/assets/images/logo_black.png" class="banner-logo-img" />
+				</figure>
+				
+				<div class="banner-content">
+					<h2 class="banner-content-title">Starting <span class="banner-content-title-span">life</span> & <br />Exploring <span class="banner-content-title-span">the city</span> at <br /><span class="banner-content-title-span d-bubbles">Zone99</span></h2>
+					<!--
+					<h2 class="banner-content-title">Building <span class="banner-content-title-span">visions</span> & <br />Creating <span class="banner-content-title-span">reality</span> with <br /><span class="banner-content-title-span d-bubbles">Zone99</span></h2>
+					-->
+					
+					<div class="banner-content-cta">
+						<p class="banner-content-cta-text">It's not just a place to stay; it's a community-driven space to begin your journey and connect with the energy of the city.</p>
+						
+						<!--
+						<p class="banner-content-cta-text">About us. We are a futuristic construction company focused on innovative technologies and sustainability.</p>
+						-->
+						
+						<label for="chkbx4brochure" class="banner-content-cta-button u-cta-button"><!--<span class="banner-content-cta-button-icon u-cta-button-icon"></span>-->READ THE BROCHURE</label>
+					</div>
+				</div>
+			</section>
+			
+			<section class="brochure d-cssCentered"><div class="brochure_dock d-midWrap">
+				<div><label for="chkbx4brochure" class="u-cta-button">X</label></div>
+
+				<figure class="brochure-figure">
+					<img src="/assets/images/brochure.png" class="brochure-figure-img" />
+				</figure>
+				
+				<div class="brochure-details">
+					<h5 class="brochure-details-title">Discover Zone99: <br />Download Our Brochure</h5>
+					<p class="brochure-details-text">Curious to learn more about Zone99? Download our brochure to explore everything we have to offer—from comfortable, community-driven spaces to a vibrant city lifestyle that’s waiting for you. Inside, you’ll find all the details about our amenities, vision, and how we make starting your journey effortless. Whether you're looking for a fresh start or a convenient place to stay, Zone99 is here to make it happen. Click below to download the brochure and take the first step toward your next adventure.</p>
+					<a href="/assets/files/brochure.pdf" class="brochure-details-button u-cta-button" download>Download the Brochure</a>
+				</div>
+			</div></section>
+			
+			<section class="places"><ul class="places-list">{% for file in site.data.map %}
+				<li class="places-list-item">{% for data in file %}<div class="places-zone is-map_{{ data[1] | downcase | replace: ' ', '-' }}" style="background-image: url('../../assets/images/map_{{ data[1] | downcase | replace: ' ', '-' }}.png');">
+					<img src="/assets/images/placeholder-zone99.png" class="places-zone-img" />
+					
+					<div class="places-zone-content d-cssCentered">
+						<span class="places-zone-content-button">{% if data[0] == "unavailable" %}&cross;{% else %}&check;{% endif %} {{ data[0] | replace: '-', ' ' }}</span>
+						
+						<img src="/assets/images/icon_map_beige.png" class="places-zone-content-icon" />
+						<span class="places-zone-content-location">{{ data[1] }}</span>
+					</div>
+				</div>{% endfor %}</li>
+			{% endfor %}</ul></section>
+			
+			<section class="specials">
+				<div class="d-Z99 d-bubbles">&nbsp;</div>
+				<div class="specials-offers">{% for file in site.data.perks %}{% for data in file %}{% if data contains "Archives" %}{% else %}
+					<div class="specials-offers-box nthChild-{{ forloop.index }}">
+						<span class="specials-offers-box-span">{{ data[0] }}:</span> 
+						<p class="specials-offers-box-p">{{ data[1] }}</p>
+					</div>{% endif %}{% endfor %}{% endfor %}
+				</div>
+			
+				<h3 class="specials-title">Come as <br />a guest. Become <br />our family. Join the Z99 Community!</h3>
+				<!--
+				<h3 class="specials-title">Come as <br />a guest. Become <br />an investor. Join the Z99 Community!</h3>
+				-->
+			</section>
+			
+			<form method="post" class="contact" action="https://formspree.io/f/movvwbjd">
+				<p class="contact-text">We've got everything, from R500 packages to monthly rentals of R3000 only. Tell us what you need!</p>
+			
+				<fieldset>
+					<div class="contact-fieldset-line">
+						<span class="contact-fieldset-tooltip">First Name:</span>
+						<input type="text" class="contact-fieldset-input" name="first-name" />
+					</div><div class="contact-fieldset-line">
+						<span class="contact-fieldset-tooltip">Last Name:</span>
+						<input type="text" class="contact-fieldset-input" name="last-name" />
+					</div>
+					
+					<div class="contact-fieldset-line">
+						<span class="contact-fieldset-tooltip">Whatsapp:</span>
+						<input type="tel" class="contact-fieldset-input" name="phone" />
+					</div><div class="contact-fieldset-line">
+						<span class="contact-fieldset-tooltip">Email:</span>
+						<input type="email" class="contact-fieldset-input" name="email" />
+					</div>
+					
+					<div class="contact-fieldset-line">
+						<span class="contact-fieldset-tooltip">Area of Interest:</span>
+						<select class="contact-fieldset-select" name="area-of-interest">{% for file in site.data.map %}{% for data in file %}
+							<option{% if data[1] == "Observatory" %} selected{% endif %}>{{ data[1] }}</option>{% endfor %}{% endfor %}
+						</select>
+					</div><div class="contact-fieldset-line">
+					</div>
+					
+					<div class="contact-fieldset-line">
+						<span class="contact-fieldset-tooltip">Accomodation Type:</span>
+						<select class="contact-fieldset-select" name="area-of-interest">
+							<option>Solo Space Without Accomodation</option>
+							<option>Solo Space With Accomodation</option>
+							<option selected>Shared Space</option>
+						</select>
+					</div><div class="contact-fieldset-line">
+					</div>
+					
+					<div class="contact-fieldset-line">
+						<span class="contact-fieldset-tooltip">Message:</span>
+						<textarea class="contact-fieldset-textarea" name="message"></textarea>
+					</div>
+					
+					<div class="contact-fieldset-cta">
+						<span class="contact-fieldset-cta-title d-bubbles">Zone99</span></h2>
+						<input type="submit" class="contact-fieldset-cta-button u-cta-button" value="Send Message" />
+					</div>
+					
+					<div class="cookies" style="visibility: hidden !important; display: none !important;">
+						<input type="text" id="address" name="address" placeholder="Address" />
+					</div>
+				</fieldset>
+			</form>
+			
+			<footer class="footer">
+				<p class="footer-copyrights">&copy; Copyrights 2024: <a href="https://coporomalala.com">Corporo Malala</a>. All rights reserved.</p>
+			</footer>
+		</main>
+		
+		<script src="/assets/scripts/zone99-dot-corporomalala-dot-com.js"></script>
+	</body>
+</html>
