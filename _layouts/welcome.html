@@ -54,7 +54,7 @@
 					<img src="/assets/images/placeholder-zone99.png" class="places-zone-img" />
 					
 					<div class="places-zone-content d-cssCentered">
-						<span class="places-zone-content-button">{% if data[0] == "unavailable" %}&cross;{% else %}&check;{% endif %} {{ data[0] | replace: '-', ' ' }}</span>
+						<span class="places-zone-content-button">{% if data[0] == "available" %}&check;{% else %}&cross;{% endif %} {{ data[0] | replace: '-', ' ' }}</span>
 						
 						<img src="/assets/images/icon_map_beige.png" class="places-zone-content-icon" />
 						<span class="places-zone-content-location">{{ data[1] }}</span>
